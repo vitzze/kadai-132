@@ -1,8 +1,35 @@
 @charset "utf-8";
+/* 
+-----------------------
+◆footer下部固定且つ、中央寄せ。
+
+body {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 100px; ※任意の値。長いページになったとき被らないように。
+}
+
+footer {
+  width: 100%;
+  position: absoltute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+※全体的にmax-widthをpx指定するのはそれはそれで別にすること。
+----------------------- 
+*/
+
 
 body {
   font-size: 14px;
   color: rgb(95, 95, 95);
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 180px;
 }
 
 .header,
@@ -220,20 +247,31 @@ ul.item-list
  }
 
  .footer {
-  margin-top: 100px;
-  margin-bottom: 30px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
  }
 
  .footer-inner {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
  }
 
  .footer-inner > ul {
   display: flex;
   flex-direction: row;
   font-size: 12px;
+
  }
 
 .footer-inner > ul li {
